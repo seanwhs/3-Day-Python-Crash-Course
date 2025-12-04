@@ -1,0 +1,78 @@
+{\rtf1\ansi\deff0
+{\fonttbl{\f0 Calibri;}{\f1 Courier New;}}
+{\colortbl;\red0\green112\blue192;\red0\green0\blue0;\red255\green140\blue0;}
+
+\pard\qc\sb240\sa240{\b\fs32 Weekend Python Crash Course \u128013?}\par
+\pard\qc\sb120\sa240{\fs24 Day 3: Lab Sheet \u8211? OOP, Libraries & Mini Projects}\par
+
+\pard\sb240\sa120{\b\cf1\fs28 \u127937? Exercise 1: Object-Oriented Programming (OOP)}\par
+
+\pard\sb120\sa60{\b\fs22 Task 1: Create a Car Class}\par
+\pard\sb60\sa30
+1. Define a Car class with attributes: make, model, year.\par
+2. Add a method display_info() that prints all car details.\par
+3. Create 2 car objects and call display_info() for each.\par
+
+\pard\sb120\sa60{\b\fs22 Task 2: Extend the Class}\par
+\pard\fi-360\li720\sb60
+\u8226?\tab Add a method age() to calculate car age based on the current year.\par
+\u8226?\tab Test the method with your car objects.\par
+
+\pard\sb120\sa60{\b\fs22 Task 3: Optional Challenge}\par
+\pard\fi-360\li720\sb60
+\u8226?\tab Create a BankAccount class with owner, balance attributes.\par
+\u8226?\tab Add methods: deposit(amount) and withdraw(amount).\par
+\u8226?\tab Test by creating accounts and performing transactions.\par
+
+\page
+
+\pard\sb240\sa120{\b\cf1\fs28 \u128290? Exercise 2: Python Libraries}\par
+
+\pard\sb120\sa60{\b\fs22 Standard Libraries}\par
+\pard\sb60\sa30
+1. {\b random:} Write a program to roll two dice and print the sum.\par
+2. {\b datetime:} Print the current date and time in YYYY-MM-DD HH:MM format.\par
+3. {\b math:} Calculate the square root, power, and factorial of a number.\par
+
+\pard\sb120\sa60{\b\fs22 Optional Libraries}\par
+\pard\sb60\sa30
+1. {\b pandas:} Create a DataFrame with 3 rows: Name, Age, City. Display it.\par
+2. {\b requests:} Fetch data from an API (optional) and print the response.\par
+
+\pard\sb240\sa120{\b\cf1\fs28 \u128736? Exercise 3: Mini Projects}\par
+
+\pard\sb120\sa60{\b\fs22 Project 1: Text-Based Adventure / Quiz Game}\par
+\pard\fi-360\li720\sb60
+\u8226?\tab Create a game using {\b functions}, {\b loops}, and optionally {\b OOP}.\par
+\u8226?\tab Example:\par
+\pard\fi-360\li1080\sb30
+\u9702?\tab Present choices to the player.\par
+\u9702?\tab Track score or progress.\par
+\u9702?\tab End the game with a summary.\par
+
+\pard\sb120\sa60{\b\fs22 Project 2: Small Utility Program}\par
+\pard\sb60
+Build a small program, for example:\par
+\pard\fi-360\li720\sb60
+\u8226?\tab Budget tracker (add, view, calculate totals)\par
+\u8226?\tab Contact manager (extend Day 2, add new features)\par
+\u8226?\tab Log analyzer (read a file and summarize content)\par
+
+\page
+
+\pard\sb240\sa120{\b\cf1\fs28 \u128161? Tips}\par
+
+\pard\fi-360\li720\sb60
+\u8226?\tab Test each part (class or function) before integrating into a project.\par
+\u8226?\tab Use meaningful names for classes, variables, and functions.\par
+\u8226?\tab Keep code organized and modular.\par
+\u8226?\tab Encourage adding optional enhancements (extra features, error handling).\par
+
+\pard\sb240\sa120{\b\cf1\fs28 \u9989? End-of-Day Challenge}\par
+
+\pard\sb60
+Combine {\b OOP}, {\b functions}, and {\b libraries} in a single project:\par
+\pard\sb120\sa60
+{\b Example:} A Quiz Game where each {\b Question} is an object, random questions are selected, and the final score is displayed using pandas or printed in a table format.\par
+
+}

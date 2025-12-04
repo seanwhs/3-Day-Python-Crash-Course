@@ -1,0 +1,139 @@
+{\rtf1\ansi\deff0
+{\fonttbl{\f0 Calibri;}{\f1 Courier New;}}
+{\colortbl;\red0\green112\blue192;\red0\green0\blue0;\red255\green140\blue0;}
+
+\pard\qc\sb240\sa240{\b\fs32 Weekend Python Crash Course \u128013?}\par
+\pard\qc\sb120\sa240{\fs24 Day 1: Lab Sheet \u8211? Python Basics & Core Concepts}\par
+
+\pard\sb240\sa120{\b\cf1\fs28 \u127937? Exercise 1: Hello Python}\par
+
+\pard\sb60\sa30
+1. Open your IDE or Python REPL.\par
+2. Create a new file called hello.py.\par
+3. Write a Python program that:\par
+\pard\fi-360\li1080\sb30
+\u8226?\tab Prints your name.\par
+\u8226?\tab Prints your age.\par
+\u8226?\tab Prints a welcome message.\par
+
+\pard\sb120\sa60{\b Example Output:}\par
+\pard\sb60{\f1\fs20
+Hello, Alice!\par
+You are 25 years old.\par
+Welcome to Python!\par
+}
+
+\pard\sb240\sa120{\b\cf1\fs28 \u128290? Exercise 2: Variables and Data Types}\par
+
+\pard\sb60\sa30
+1. Create variables for:\par
+\pard\fi-360\li1080\sb30
+\u8226?\tab your_name (string)\par
+\u8226?\tab your_age (integer)\par
+\u8226?\tab favorite_number (float)\par
+
+\pard\sb60\sa30
+2. Print each variable on a new line.\par
+
+\pard\sb120\sa60{\b\cf3 Bonus:} Print a sentence using all three variables, e.g.,\par
+\pard\sb60{\f1\fs20
+Alice is 25 years old and her favorite number is 7.5\par
+}
+
+\pard\sb240\sa120{\b\cf1\fs28 \u10133? Exercise 3: Basic Operators}\par
+
+\pard\sb60\sa30
+1. Assign values to variables a = 10 and b = 3.\par
+2. Print the results of:\par
+\pard\fi-360\li1080\sb30
+\u8226?\tab Addition\par
+\u8226?\tab Subtraction\par
+\u8226?\tab Multiplication\par
+\u8226?\tab Division\par
+\u8226?\tab Modulus\par
+
+\pard\sb60\sa30
+3. Extra challenge: Calculate the area of a rectangle with width = 5 and height = 7.\par
+
+\page
+
+\pard\sb240\sa120{\b\cf1\fs28 \u128739? Exercise 4: Input and Output}\par
+
+\pard\sb60\sa30
+1. Ask the user for their {\b name} using input().\par
+2. Ask the user for their {\b age}.\par
+3. Print a greeting message that includes their name and age.\par
+
+\pard\sb120\sa60{\b\cf3 Bonus:} Ask the user for {\b two numbers} and print their {\b sum, difference, product, and quotient}.\par
+
+\pard\sb240\sa120{\b\cf1\fs28 \u128256? Exercise 5: Control Flow \u8211? If/Else}\par
+
+\pard\sb60\sa30
+1. Ask the user for a number.\par
+2. Print whether the number is {\b positive, negative, or zero}.\par
+
+\pard\sb120\sa60{\b\cf3 Bonus:} Ask the user for their age and print:\par
+\pard\fi-360\li1080\sb30
+\u8226?\tab "Child" if age < 12\par
+\u8226?\tab "Teen" if 12 <= age < 18\par
+\u8226?\tab "Adult" if age >= 18\par
+
+\pard\sb240\sa120{\b\cf1\fs28 \u128256? Exercise 6: Loops}\par
+
+\pard\sb120\sa60{\b\fs22 Part A \u8211? For Loop}\par
+\pard\sb60\sa30
+1. Print all numbers from 1 to 10.\par
+2. Print all even numbers from 2 to 20.\par
+
+\pard\sb120\sa60{\b\fs22 Part B \u8211? While Loop}\par
+\pard\sb60\sa30
+1. Initialize a variable count = 0.\par
+2. Print the value of count while count < 5, and increment count each time.\par
+
+\pard\sb120\sa60{\b\cf3 Bonus:} Write a number guessing game:\par
+\pard\fi-360\li1080\sb30
+\u8226?\tab Program selects a random number between 1\u8211?10.\par
+\u8226?\tab User keeps guessing until they find the correct number.\par
+
+\pard\sb60\sa30{\i Hint: Use import random and random.randint(1,10).}\par
+
+\page
+
+\pard\sb240\sa120{\b\cf1\fs28 \u9989? End-of-Day Mini Project}\par
+
+\pard\sb60\sa30
+Create a program that:\par
+
+\pard\sb60\sa30
+1. Asks the user for:\par
+\pard\fi-360\li1080\sb30
+\u8226?\tab Name\par
+\u8226?\tab Age\par
+\u8226?\tab Favorite number\par
+
+\pard\sb60\sa30
+2. Prints:\par
+\pard\sb60{\f1\fs20
+Hello <name>! In 5 years, you will be <age+5>.\par
+Your favorite number doubled is <favorite_number*2>.\par
+}
+
+\pard\sb60\sa30
+3. Extra challenge: Repeat the program for {\b 3 users} using a loop.\par
+
+\pard\sb240\sa120{\b\cf1\fs28 \u128161? Tips}\par
+
+\pard\fi-360\li720\sb60
+\u8226?\tab Test each part of your code as you go.\par
+\u8226?\tab Use comments to explain your logic:\par
+
+\pard\sb60{\f1\fs20
+# This prints a greeting\par
+print("Hello, world!")\par
+}
+
+\pard\fi-360\li720\sb60
+\u8226?\tab Save your file often.\par
+\u8226?\tab Don't be afraid to make mistakes \u8212? debugging helps you learn.\par
+
+}

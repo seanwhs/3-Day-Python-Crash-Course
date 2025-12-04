@@ -1,0 +1,179 @@
+﻿
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+<meta charset='utf-8'>
+<title>Weekend Python Crash Course - Day 3</title>
+<style>
+body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; line-height: 1.5; margin: 1in; }
+h1 { font-size: 24pt; color: #2E75B6; font-weight: bold; margin-top: 12pt; margin-bottom: 6pt; }
+h2 { font-size: 18pt; color: #2E75B6; font-weight: bold; margin-top: 12pt; margin-bottom: 6pt; border-bottom: 2pt solid #2E75B6; padding-bottom: 3pt; }
+h3 { font-size: 14pt; color: #404040; font-weight: bold; margin-top: 10pt; margin-bottom: 6pt; }
+p { margin: 6pt 0; }
+ul, ol { margin: 6pt 0; padding-left: 24pt; }
+li { margin: 3pt 0; }
+pre { background-color: #F2F2F2; border: 1pt solid #D0D0D0; padding: 10pt; font-family: Consolas, 'Courier New', monospace; font-size: 9pt; margin: 6pt 0; white-space: pre-wrap; }
+code { background-color: #F2F2F2; font-family: Consolas, 'Courier New', monospace; font-size: 9pt; padding: 2pt 4pt; }
+hr { border: none; border-top: 1pt solid #D0D0D0; margin: 12pt 0; }
+strong { font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>🐍 Weekend Python Crash Course</h1>
+<h2>Day 3: Learner Guide – OOP, Libraries &amp; Mini Projects</h2>
+
+<hr>
+
+<h2>📚 Objectives</h2>
+<p>By the end of Day 3, you will be able to:</p>
+<ol>
+<li>Understand Object-Oriented Programming (OOP) basics: classes, objects, attributes, and methods.</li>
+<li>Create simple classes and use them in Python programs.</li>
+<li>Explore useful Python libraries (<code>random</code>, <code>datetime</code>, <code>math</code>, <code>requests</code>, <code>pandas</code>).</li>
+<li>Complete mini projects using Python fundamentals, OOP, and libraries.</li>
+</ol>
+
+<hr>
+
+<h2>🏁 1. Object-Oriented Programming (OOP)</h2>
+
+<h3>What is OOP?</h3>
+<ul>
+<li>A programming paradigm using <strong>objects</strong> and <strong>classes</strong> to model real-world entities.</li>
+<li>Encourages modular, reusable code.</li>
+</ul>
+
+<h3>Class and Object Example</h3>
+<pre>class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        print(f"Hello, my name is {self.name} and I am {self.age} years old.")
+
+# Create objects
+person1 = Person("Alice", 25)
+person2 = Person("Bob", 30)
+
+person1.greet()
+person2.greet()</pre>
+
+<h3>Exercises</h3>
+<ol>
+<li>Create a <code>Car</code> class with <code>make</code>, <code>model</code>, and <code>year</code> attributes.</li>
+<li>Add a method <code>display_info()</code> that prints the car details.</li>
+<li>Create 2 car objects and call <code>display_info()</code> for each.</li>
+</ol>
+
+<hr>
+
+<h2>➕ 2. Python Libraries</h2>
+
+<h3>Standard Libraries</h3>
+<ul>
+<li><strong>random</strong>: generate random numbers, shuffle lists</li>
+<li><strong>datetime</strong>: work with dates and times</li>
+<li><strong>math</strong>: mathematical functions</li>
+</ul>
+
+<pre>import random
+print(random.randint(1, 10))
+
+from datetime import datetime
+print(datetime.now())
+
+import math
+print(math.sqrt(16))</pre>
+
+<h3>Optional Libraries</h3>
+<ul>
+<li><strong>requests</strong>: access web APIs</li>
+<li><strong>pandas</strong>: handle data in tables (DataFrames)</li>
+</ul>
+
+<pre>import pandas as pd
+
+data = {"Name": ["Alice", "Bob"], "Age": [25, 30]}
+df = pd.DataFrame(data)
+print(df)</pre>
+
+<h3>Exercises</h3>
+<ol>
+<li>Use <code>random</code> to simulate rolling two dice and print the sum.</li>
+<li>Use <code>datetime</code> to print current date and time in <code>YYYY-MM-DD HH:MM</code> format.</li>
+<li>Create a simple <code>pandas</code> DataFrame with 3 rows of data and display it.</li>
+</ol>
+
+<hr>
+
+<h2>🛠 3. Mini Projects</h2>
+
+<h3>Project 1: Text-Based Adventure Game</h3>
+<ul>
+<li>Create a game using <strong>functions</strong>, <strong>loops</strong>, and <strong>OOP</strong> concepts.</li>
+<li>Examples:
+<ul>
+<li>Quiz game with points</li>
+<li>Adventure game with choices</li>
+</ul>
+</li>
+</ul>
+
+<h3>Project 2: Simple Utility Program</h3>
+<ul>
+<li>Create a small Python tool, such as:
+<ul>
+<li>Budget tracker</li>
+<li>Contact manager (extend Day 2)</li>
+<li>Log analyzer</li>
+</ul>
+</li>
+</ul>
+
+<h3>Tips for Mini Projects</h3>
+<ul>
+<li>Break tasks into functions and classes.</li>
+<li>Test each part before combining.</li>
+<li>Use libraries where appropriate (e.g., <code>random</code> for game events).</li>
+</ul>
+
+<hr>
+
+<h2>💡 Tips for Day 3</h2>
+<ul>
+<li>Encourage creativity and experimentation in mini projects.</li>
+<li>Guide learners on structuring code with OOP principles.</li>
+<li>Demonstrate library usage with small, real-world examples.</li>
+<li>Offer optional challenges for advanced learners (e.g., API access using <code>requests</code>).</li>
+</ul>
+
+<hr>
+
+<h2>📚 Resources</h2>
+<ul>
+<li><a href="https://docs.python.org/3/tutorial/classes.html">Python Official Documentation – Classes</a></li>
+<li><a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python – Classes &amp; Modules</a></li>
+<li><a href="https://docs.python.org/3/library/">Python Standard Library Documentation</a></li>
+<li><a href="https://pandas.pydata.org/docs/">Pandas Documentation</a></li>
+</ul>
+
+<hr>
+
+<h2>🎯 Outcome</h2>
+<p>By the end of Day 3, participants will be able to:</p>
+<ul>
+<li>Understand and apply OOP basics in Python</li>
+<li>Use Python standard and optional libraries effectively</li>
+<li>Build fun, small Python projects independently</li>
+<li>Plan and organize Python code for real-world tasks</li>
+</ul>
+
+<hr>
+
+<p style="text-align: center; margin-top: 20pt; font-style: italic; color: #666;">
+End of Day 3 Learner Guide
+</p>
+
+</body>
+</html>

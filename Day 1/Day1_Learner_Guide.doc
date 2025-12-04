@@ -1,0 +1,203 @@
+
+      <html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+      <head>
+        <meta charset='utf-8'>
+        <title>Weekend Python Crash Course - Day 1</title>
+        <style>
+          body { font-family: Calibri, Arial, sans-serif; line-height: 1.6; margin: 40px; }
+          h1 { color: #2563eb; font-size: 28pt; border-bottom: 3px solid #2563eb; padding-bottom: 10px; }
+          h2 { color: #1e40af; font-size: 20pt; margin-top: 30px; border-bottom: 2px solid #93c5fd; padding-bottom: 5px; }
+          h3 { color: #1e3a8a; font-size: 16pt; margin-top: 20px; }
+          code { background-color: #f3f4f6; padding: 2px 6px; font-family: 'Courier New', monospace; font-size: 10pt; }
+          pre { background-color: #1f2937; color: #f9fafb; padding: 15px; border-radius: 5px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 10pt; }
+          table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+          th, td { border: 1px solid #d1d5db; padding: 10px; text-align: left; }
+          th { background-color: #3b82f6; color: white; font-weight: bold; }
+          ul, ol { margin: 15px 0; padding-left: 30px; }
+          li { margin: 8px 0; }
+          .emoji { font-size: 14pt; }
+          .box { background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 15px; margin: 20px 0; }
+          .challenge { background-color: #dbeafe; border-left: 4px solid #2563eb; padding: 15px; margin: 20px 0; }
+        </style>
+      </head>
+      <body>
+        <h1><span class="emoji">🐍</span> Weekend Python Crash Course</h1>
+        <h2>Day 1: Python Basics & Core Concepts – Learner Guide</h2>
+        
+        <h2><span class="emoji">📚</span> Objectives</h2>
+        <p>By the end of Day 1, you will be able to:</p>
+        <ol>
+          <li>Understand what Python is and why it is popular.</li>
+          <li>Install Python and set up an IDE (VS Code / PyCharm / Jupyter Notebook).</li>
+          <li>Run your first Python scripts and use the REPL.</li>
+          <li>Understand variables and data types.</li>
+          <li>Write programs using basic operators and input/output.</li>
+          <li>Implement control flow using if, elif, else, and loops (for, while).</li>
+        </ol>
+
+        <h2><span class="emoji">🏁</span> 1. Getting Started with Python</h2>
+        
+        <h3>What is Python?</h3>
+        <ul>
+          <li>Python is a high-level, interpreted programming language.</li>
+          <li>Known for readability, versatility, and a large community.</li>
+        </ul>
+
+        <h3>Setting Up Your Environment</h3>
+        <ol>
+          <li>Install <strong>Python</strong> from <a href="https://www.python.org/downloads/">python.org</a>.</li>
+          <li>Choose an IDE:
+            <ul>
+              <li><a href="https://code.visualstudio.com/">VS Code</a></li>
+              <li><a href="https://www.jetbrains.com/pycharm/">PyCharm</a></li>
+              <li><a href="https://jupyter.org/install">Jupyter Notebook</a></li>
+            </ul>
+          </li>
+          <li>Test your installation:
+            <pre>python --version</pre>
+          </li>
+        </ol>
+
+        <h3>Running Your First Script</h3>
+        <ol>
+          <li>Open your IDE or terminal.</li>
+          <li>Create a new file <code>hello.py</code>.</li>
+          <li>Type the following:
+            <pre>print("Hello, Python!")</pre>
+          </li>
+          <li>Run the script and see the output.</li>
+        </ol>
+
+        <h2><span class="emoji">🔢</span> 2. Variables and Data Types</h2>
+        
+        <h3>Variables</h3>
+        <p>Used to store data values.</p>
+        <pre>name = "Alice"
+age = 25
+height = 1.65</pre>
+
+        <h3>Data Types</h3>
+        <table>
+          <tr>
+            <th>Type</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td>int</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>float</td>
+            <td>1.65</td>
+          </tr>
+          <tr>
+            <td>str</td>
+            <td>"Alice"</td>
+          </tr>
+          <tr>
+            <td>bool</td>
+            <td>True / False</td>
+          </tr>
+        </table>
+
+        <h3>Exercises</h3>
+        <ol>
+          <li>Create variables for your <strong>name</strong>, <strong>age</strong>, and <strong>favorite number</strong>.</li>
+          <li>Print a sentence introducing yourself using your variables.</li>
+        </ol>
+
+        <h2><span class="emoji">➕</span> 3. Basic Operators</h2>
+        
+        <h3>Arithmetic Operators</h3>
+        <pre>a = 10
+b = 3
+print(a + b)  # Addition
+print(a - b)  # Subtraction
+print(a * b)  # Multiplication
+print(a / b)  # Division
+print(a % b)  # Modulus</pre>
+
+        <h3>Exercises</h3>
+        <ul>
+          <li>Calculate the area of a rectangle with width=5 and height=7.</li>
+          <li>Convert temperature from Celsius to Fahrenheit using the formula:
+            <pre>F = (C * 9/5) + 32</pre>
+          </li>
+        </ul>
+
+        <h2><span class="emoji">🛣️</span> 4. Input and Output</h2>
+        
+        <h3>Getting Input</h3>
+        <pre>name = input("Enter your name: ")
+print("Hello, " + name + "!")</pre>
+
+        <h3>Exercises</h3>
+        <ul>
+          <li>Ask the user for <strong>two numbers</strong> and print their <strong>sum</strong>.</li>
+          <li>Ask the user for their <strong>age</strong> and print <strong>how old they will be in 5 years</strong>.</li>
+        </ul>
+
+        <h2><span class="emoji">🔀</span> 5. Control Flow</h2>
+        
+        <h3>If / Else</h3>
+        <pre>age = int(input("Enter your age: "))
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are a minor.")</pre>
+
+        <h3>Exercises</h3>
+        <ul>
+          <li>Ask the user for a number and print if it is <strong>positive, negative, or zero</strong>.</li>
+        </ul>
+
+        <h3>Loops</h3>
+        
+        <h4>For Loop</h4>
+        <pre>for i in range(5):
+    print(i)</pre>
+
+        <h4>While Loop</h4>
+        <pre>count = 0
+while count < 5:
+    print(count)
+    count += 1</pre>
+
+        <h3>Exercises</h3>
+        <ol>
+          <li>Print all <strong>even numbers</strong> from 1 to 20.</li>
+          <li>Write a <strong>number guessing game</strong> where the program selects a number between 1–10, and the user guesses until correct.</li>
+        </ol>
+
+        <h2><span class="emoji">💡</span> Tips for Today</h2>
+        <ul>
+          <li>Save your scripts often.</li>
+          <li>Use comments to explain your code:
+            <pre># This is a comment</pre>
+          </li>
+          <li>Don't worry about mistakes — debugging is part of learning.</li>
+          <li>Experiment with the code! Try changing numbers, strings, and conditions.</li>
+        </ul>
+
+        <div class="challenge">
+          <h2><span class="emoji">✅</span> End-of-Day Challenge</h2>
+          <p>Create a small program that:</p>
+          <ol>
+            <li>Asks the user for their <strong>name</strong>, <strong>age</strong>, and <strong>favorite number</strong>.</li>
+            <li>Prints a message like:
+              <pre>Hello Alice! In 5 years, you will be 30 years old. Your favorite number doubled is 42.</pre>
+            </li>
+            <li><strong>Bonus:</strong> Add a loop to repeat this for <strong>3 different users</strong>.</li>
+          </ol>
+        </div>
+
+        <h2><span class="emoji">📚</span> Resources</h2>
+        <ul>
+          <li><a href="https://docs.python.org/3/">Python Official Documentation</a></li>
+          <li><a href="https://replit.com/">Replit Online IDE</a></li>
+          <li><a href="https://www.w3schools.com/python/">W3Schools Python Tutorial</a></li>
+        </ul>
+
+      </body>
+      </html>
+    

@@ -1,0 +1,97 @@
+{\rtf1\ansi\deff0
+{\fonttbl{\f0 Calibri;}{\f1 Courier New;}}
+{\colortbl;\red0\green112\blue192;\red0\green0\blue0;\red255\green140\blue0;}
+
+\pard\qc\sb240\sa240{\b\fs32 Weekend Python Crash Course \u128013?}\par
+\pard\qc\sb120\sa240{\fs24 Day 2: Lab Sheet \u8211? Functions, Data Structures & File Handling}\par
+
+\pard\sb240\sa120{\b\cf1\fs28 \u127937? Exercise 1: Functions}\par
+
+\pard\sb60\sa30
+1. Write a function square(number) that returns the square of a number.\par
+2. Write a function greet_user() that asks for a name and prints Hello, <name>!.\par
+3. Write a function is_even(number) that returns True if the number is even, otherwise False.\par
+4. Create a function calculate_area(width, height) that returns the area of a rectangle.\par
+
+\pard\sb120\sa60{\b\cf3 Bonus:} Write a function roll_dice() that simulates rolling a six-sided dice and prints the result.\par
+
+\pard\sb240\sa120{\b\cf1\fs28 \u128290? Exercise 2: Lists, Tuples, Sets, Dictionaries}\par
+
+\pard\sb120\sa60{\b\fs22 Lists}\par
+\pard\sb60\sa30
+1. Create a list favorite_movies with 5 movie names.\par
+2. Add a new movie to the list and print it.\par
+3. Print the first and last movie in the list.\par
+
+\pard\sb120\sa60{\b\fs22 Tuples}\par
+\pard\sb60\sa30
+1. Create a tuple cities with 3 cities you want to visit.\par
+2. Try to modify one of the cities and observe what happens.\par
+
+\pard\sb120\sa60{\b\fs22 Sets}\par
+\pard\sb60\sa30
+1. Create a set numbers = \{1, 2, 3, 3, 4\}.\par
+2. Add a new number and print the set.\par
+3. Remove a number and print the set.\par
+
+\pard\sb120\sa60{\b\fs22 Dictionaries}\par
+\pard\sb60\sa30
+1. Create a dictionary contacts with 2 entries: name and phone number.\par
+2. Add a new contact.\par
+3. Print all contact names.\par
+
+\page
+
+\pard\sb240\sa120{\b\cf1\fs28 \u128736? Exercise 3: Strings}\par
+
+\pard\sb60\sa30
+1. Ask the user for their first and last name and print in {\b uppercase}.\par
+2. Replace all vowels in a string with *.\par
+3. Format a string using {\b f-string} to display name, age, and favorite color.\par
+
+\pard\sb120\sa60{\b Example:}\par
+\pard\sb60{\f1\fs20
+Alice is 25 years old and her favorite color is Blue.\par
+}
+
+\pard\sb240\sa120{\b\cf1\fs28 \u128196? Exercise 4: File Handling}\par
+
+\pard\sb120\sa60{\b\fs22 Text Files}\par
+\pard\sb60\sa30
+1. Create a file quotes.txt and write 5 lines of your favorite quotes.\par
+2. Read the file and print each line.\par
+
+\pard\sb120\sa60{\b\fs22 CSV Files}\par
+\pard\sb60\sa30
+1. Create a CSV file contacts.csv with columns: Name, Phone, Email.\par
+2. Add 3 contacts to the CSV.\par
+3. Read the CSV file and print each contact.\par
+
+\page
+
+\pard\sb240\sa120{\b\cf1\fs28 \u9989? Mini Project}\par
+
+\pard\sb120\sa60{\b\fs22 Project 1: Contact Manager}\par
+\pard\sb60
+Create a program that:\par
+\pard\sb60\sa30
+1. Stores contacts in a dictionary.\par
+2. Allows the user to {\b add}, {\b view}, and {\b search} contacts.\par
+3. Saves contacts to a CSV file.\par
+
+\pard\sb120\sa60{\b\fs22 Project 2: Quiz Game}\par
+\pard\fi-360\li720\sb60
+\u8226?\tab Create a list of questions and answers.\par
+\u8226?\tab Ask the user each question in a loop.\par
+\u8226?\tab Track the number of correct answers.\par
+\u8226?\tab Print the final score using an f-string.\par
+
+\pard\sb240\sa120{\b\cf1\fs28 \u128161? Tips}\par
+
+\pard\fi-360\li720\sb60
+\u8226?\tab Test each function or snippet separately before combining.\par
+\u8226?\tab Save files in a folder named Day2_Labs.\par
+\u8226?\tab Use comments to explain what each part of your code does.\par
+\u8226?\tab Experiment with different data structures to see which fits best.\par
+
+}
