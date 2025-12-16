@@ -1,0 +1,106 @@
+# Object Oriented Programming
+
+Object-oriented programming (OOP) is a programming paradigm that focuses on creating objects that contain both data and methods to operate on that data. Python is an object-oriented programming language and therefore, it supports OOP concepts.
+
+The main OOP concepts are:
+
+- Class: a blueprint or template for creating objects.
+- Object: an instance of a class.
+- Inheritance: a mechanism by which a new class is derived from an existing class.
+- Polymorphism: a feature that allows one interface to be used for multiple implementations.
+- Encapsulation: the concept of binding data and methods together in a single unit, called a class.
+
+In Python, we define a class using the **`class`** keyword followed by the class name. The methods defined in a class are functions that belong to the class and have access to its data. To create an object of a class, we use the class name followed by parentheses.
+
+Example:
+
+```
+pythonCopy code
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        print(f"Hello, my name is {self.name} and I'm {self.age} years old")
+
+person1 = Person("John", 30)
+person1.greet()
+
+```
+
+This creates a **`Person`** class with a **`__init__`** method that sets the **`name`** and **`age`** attributes of the object. The **`greet`** method prints a message using these attributes. We create an object of the **`Person`** class and call the **`greet`** method to print the message.
+
+Other OOP concepts can be implemented using class inheritance, abstract classes, interfaces, and more.
+
+It is important to understand the basics of OOP in Python as it is a fundamental concept in the language and is used extensively in many Python libraries and frameworks.
+
+Here are some examples of object-oriented programming (OOP) concepts in Python:
+
+1. Class definition:
+
+A class is a blueprint for creating objects. Here's an example of a simple class definition in Python:
+
+```
+rubyCopy code
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        print("Hello, my name is", self.name, "and I'm", self.age, "years old.")
+
+```
+
+In this example, we define a **`Person`** class with a constructor method **`__init__`** that takes two arguments (**`name`** and **`age`**). The **`self`** parameter refers to the instance of the class that we're creating. The **`greet`** method is a simple method that prints a greeting using the instance's **`name`** and **`age`** attributes.
+
+1. Object instantiation:
+
+Once we have a class defined, we can create objects (instances of the class) using the class name and passing any required arguments to the constructor. Here's an example of how to create a **`Person`** object:
+
+```
+makefileCopy code
+person1 = Person("Alice", 30)
+
+```
+
+In this example, we create a **`Person`** object called **`person1`** with the **`name`** "Alice" and the **`age`** 30.
+
+1. Inheritance:
+
+Inheritance allows us to create a new class that is a modified version of an existing class. The new class (called a subclass or derived class) inherits all the attributes and methods of the original class (called the superclass or base class) and can add or modify them as needed. Here's an example of a subclass that inherits from the **`Person`** class:
+
+```
+rubyCopy code
+class Student(Person):
+    def __init__(self, name, age, student_id):
+        super().__init__(name, age)
+        self.student_id = student_id
+
+    def learn(self):
+        print("I'm learning!")
+
+```
+
+In this example, we define a **`Student`** class that inherits from the **`Person`** class. We add a new attribute (**`student_id`**) and a new method (**`learn`**) to the subclass. We also call the superclass's constructor using the **`super`** function.
+
+1. Polymorphism:
+
+Polymorphism allows us to use objects of different classes in the same way, as long as they have the same interface (i.e., the same methods and attributes). Here's an example of polymorphism in Python:
+
+```
+scssCopy code
+def describe(person):
+    person.greet()
+
+person1 = Person("Alice", 30)
+student1 = Student("Bob", 20, "12345")
+
+describe(person1)
+describe(student1)
+
+```
+
+In this example, we define a **`describe`** function that takes a **`person`** argument and calls its **`greet`** method. We create a **`Person`** object (**`person1`**) and a **`Student`** object (**`student1`**) and pass them to the **`describe`** function. Both objects have a **`greet`** method (inherited from the **`Person`** class), so the function can call it on both of them. This is an example of polymorphism, where different objects can be used in the same way because they have the same interface (the **`greet`** method).
+
