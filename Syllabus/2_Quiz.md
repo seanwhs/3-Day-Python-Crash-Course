@@ -121,4 +121,3 @@ D) SyntaxError
 
 Answer: C (you can't multiply an integer by a string)
 
-I hope these additional questions and answers are helpful!
