@@ -148,6 +148,4 @@ These are some of the commonly used string operations in Python.
 
 </aside>
 
-[Quiz](https://www.notion.so/Quiz-b02787ce4bb146af9c32d6d69c1b9536?pvs=21)
 
-[Exercises](https://www.notion.so/Exercises-6453083a543344309d34441e12032691?pvs=21)
