@@ -1,3 +1,4 @@
+# Data Types and Variables
 Data types are the fundamental building blocks of any programming language. In Python, there are several built-in data types, including integers, floating-point numbers, strings, booleans, lists, tuples, sets, and dictionaries.
 
 Variables are used to store data values in memory that can be referenced and manipulated in your Python code. When you assign a value to a variable, you're creating a reference to that value in memory. You can use variables to store any of the data types available in Python.
