@@ -67,6 +67,3 @@ print(3
 
 ```
 
-[Quiz](https://www.notion.so/Quiz-dc124919e0ce43ea86860d5921efec58?pvs=21)
-
-[Exercises](https://www.notion.so/Exercises-615fa3ffee514a50a99867159e99ff19?pvs=21)
