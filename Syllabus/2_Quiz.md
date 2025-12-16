@@ -1,77 +1,77 @@
 # Quiz - Data Types and Variables
 
-1. What is a data type in Python?
-A) A function that returns a value
-B) A variable that holds a value
-C) A classification of data that defines the operations that can be performed on it and the type of data it can hold
-D) A type of loop in Python
+1. What is a data type in Python?    
+A) A function that returns a value  
+B) A variable that holds a value    
+C) A classification of data that defines the operations that can be performed on it and the type of data it can hold  
+D) A type of loop in Python  
 
-Answer: C
+Answer: C  
 
-1. Which of the following is a data type in Python?
-A) String
-B) Dictionary
-C) Boolean
-D) All of the above
+1. Which of the following is a data type in Python?  
+A) String  
+B) Dictionary  
+C) Boolean  
+D) All of the above  
 
-Answer: D
+Answer: D  
 
-1. How do you declare a variable in Python?
-A) By using the **`var`** keyword
-B) By using the **`let`** keyword
-C) By assigning a value to a name
-D) By using the **`declare`** keyword
+1. How do you declare a variable in Python?  
+A) By using the **`var`** keyword  
+B) By using the **`let`** keyword  
+C) By assigning a value to a name  
+D) By using the **`declare`** keyword  
 
-Answer: C
+Answer: C  
 
-1. What is the data type of the following variable?
+1. What is the data type of the following variable?  
 
 ```
-makefileCopy code
+makefileCopy code  
 x = 5.0
 
 ```
 
-A) Integer
-B) Float
-C) String
-D) Boolean
+A) Integer  
+B) Float  
+C) String  
+D) Boolean  
 
-Answer: B
+Answer: B  
 
-1. Which of the following operators can be used with numeric data types in Python?
-A) +
-B) /
-C) %
-D) All of the above
+1. Which of the following operators can be used with numeric data types in Python?  
+A) +  
+B) /  
+C) %  
+D) All of the above  
 
-Answer: D
+Answer: D  
 
-I hope these questions and answers help you better understand the concepts of data types and variables in Python!
+I hope these questions and answers help you better understand the concepts of data types and variables in Python!  
 
-1. What is the value of **`x`** after the following code is executed?
+1. What is the value of **`x`** after the following code is executed?  
 
 ```
 x = 10
 x += 5
 ```
 
-A) 5
-B) 10
-C) 15
-D) 20
+A) 5  
+B) 10  
+C) 15  
+D) 20  
 
-Answer: C
+Answer: C  
 
-1. Which of the following is a valid variable name in Python?
-A) 1variable
-B) variable1
-C) variable-1
-D) variable_1
+1. Which of the following is a valid variable name in Python?  
+A) 1variable  
+B) variable1  
+C) variable-1  
+D) variable_1  
 
-Answer: D
+Answer: D  
 
-1. What is the output of the following code?
+1. What is the output of the following code?  
 
 ```
 makefileCopy code
@@ -82,14 +82,14 @@ print(z)
 
 ```
 
-A) 10
-B) 15
-C) "105"
-D) TypeError
+A) 10  
+B) 15  
+C) "105"  
+D) TypeError  
 
-Answer: D (you can't concatenate a string and an integer without converting one of them to the other's data type)
+Answer: D (you can't concatenate a string and an integer without converting one of them to the other's data type)  
 
-1. What is the data type of the following variable?
+1. What is the data type of the following variable?  
 
 ```
 cssCopy code
@@ -97,14 +97,14 @@ x = ["apple", "banana", "cherry"]
 
 ```
 
-A) Integer
-B) Float
-C) String
-D) List
+A) Integer  
+B) Float  
+C) String  
+D) List  
 
-Answer: D
+Answer: D  
 
-1. What is the value of **`x`** after the following code is executed?
+1. What is the value of **`x`** after the following code is executed?  
 
 ```
 makefileCopy code
@@ -114,10 +114,10 @@ z = x * y
 
 ```
 
-A) 10
-B) "10"
-C) TypeError
-D) SyntaxError
+A) 10  
+B) "10"  
+C) TypeError  
+D) SyntaxError  
 
-Answer: C (you can't multiply an integer by a string)
+Answer: C (you can't multiply an integer by a string)  
 
