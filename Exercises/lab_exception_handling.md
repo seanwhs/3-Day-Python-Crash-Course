@@ -1,4 +1,9 @@
 # 🧪 **Hands-On Lab — Python Exception Handling**
+---
+**Name:** ______________________
+**Date:** ______________________
+---
+
 
 **Focus: predictable failures, clear recovery, safe systems**
 
