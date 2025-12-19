@@ -1,4 +1,9 @@
 # 🧪 **Hands-On Lab — Python Functions**
+---
+**Name:** ______________________
+**Date:** ______________________
+---
+
 
 **Focus: contracts, reuse, and predictable behavior**
 
