@@ -1,4 +1,4 @@
-## **Syllabus Description: Python Crash Course **
+## **Syllabus Description: Python Crash Course**
 
 ### **Course Description**
 
