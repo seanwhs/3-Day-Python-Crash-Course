@@ -78,7 +78,7 @@ Learner understanding is evaluated through:
 
 ---
 
-### **Capstone Project (Optional) **
+### **Capstone Project (Optional)**
 
 Learners will design and implement a **Personal Finance Tracker** using Python. The project requires learners to apply course concepts to build a functional program that manages user input, processes data, and presents meaningful output. This project demonstrates the learner’s ability to translate programming concepts into a real-world solution.
 
