@@ -1,4 +1,10 @@
 # 🧪 **Hands-On Lab — Python Magic Methods**
+---
+**Name:** ______________________
+**Date:** ______________________
+---
+
+
 
 **Focus: making objects behave predictably in real systems**
 
