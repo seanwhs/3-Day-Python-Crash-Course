@@ -1,464 +1,270 @@
-# **Python Crash Course 2025 – Challenge Workbook**
+# 📘 **Python Crash Course 2025 – Advanced Challenge Workbook**
 
-## **Module 1: Foundations — Variables, References & Execution**
+## **Module 1: Foundations — Memory, References & Execution**
 
 ### **Challenge 1.1 – Variable Binding & Identity**
 
 ```python
-x = [1,2,3]
+x = [1, 2, 3]
 y = x
 z = x.copy()
 x.append(4)
+print(f"ID x: {id(x)}, ID y: {id(y)}, ID z: {id(z)}")
 print(x, y, z)
+
 ```
 
-**Solution/Explanation:**
-`x` and `y` reference the same list, so both reflect the change. `z` is a copy and remains `[1,2,3]`.
+**Engineering Deep Dive:** Python variables are labels. `y = x` binds the label `y` to the exact same memory address as `x`. `z = x.copy()` creates a new object (shallow copy).
 
 ---
 
-### **Challenge 1.2 – Mutable vs Immutable**
+### **Challenge 1.2 – The Mutable Default Argument Trap**
+
+*New Challenge: Identify why this code is dangerous.*
 
 ```python
-a = (1,2,3)
-# Try a[0] = 10
-# Reassign a = (10,2,3)
+def add_item(item, basket=[]):
+    basket.append(item)
+    return basket
+
+print(add_item("Apple"))  # ['Apple']
+print(add_item("Banana")) # Expected ['Banana'], actual ['Apple', 'Banana']
+
 ```
 
-*Solution:* Tuples are immutable, so `a[0] = 10` raises `TypeError`. Reassignment is allowed.
+**Solution:** Default arguments are evaluated **once** at function definition time, not at call time. The list `basket` persists across calls. **Fix:** Use `basket=None` and initialize inside the function.
 
 ---
 
-### **Challenge 1.3 – Identity vs Equality**
+### **Challenge 1.3 – Small Integer Interning**
 
 ```python
-x = [1,2,3]
-y = [1,2,3]
-print(x == y)  # True
-print(x is y)  # False
+a = 256
+b = 256
+print(a is b) # True
+
+c = 257
+d = 257
+print(c is d) # False (usually)
+
 ```
 
-*Explanation:* Equality checks values; `is` checks object identity.
-
----
-
-### **Challenge 1.4 – Object Copying**
-
-```python
-import copy
-nested = [[1,2],[3,4]]
-shallow = nested.copy()
-deep = copy.deepcopy(nested)
-nested[0].append(3)
-print(shallow, deep)
-```
-
-*Solution:* Shallow copy sees changes in nested lists, deep copy is independent.
-
----
-
-### **Challenge 1.5 – Execution Pipeline**
-
-```python
-def foo():
-    return sum(range(10))
-print(foo())
-```
-
-*Tip:* Python compiles `foo()` to bytecode before execution by PVM.
+**Explanation:** For performance, Python interns (caches) integers from `-5` to `256`. Beyond that, new objects are created in memory, so `is` (identity check) fails even if `==` (value check) passes.
 
 ---
 
 ## **Module 2: Numbers, Operators & Precision**
 
-### **Challenge 2.1 – Float Precision**
+### **Challenge 2.1 – IEEE 754 & Financial Integrity**
 
 ```python
-0.1 + 0.2 == 0.3  # False
-from decimal import Decimal
-Decimal('0.1') + Decimal('0.2') == Decimal('0.3')  # True
+# The Floating Point Error
+print(0.1 + 0.2 == 0.3) # False
+
+from decimal import Decimal, getcontext
+getcontext().prec = 4 # Set precision
+val = Decimal('0.1000') + Decimal('0.2000')
+print(val == Decimal('0.3000')) # True
+
 ```
+
+**Statistics:** Standard floats (binary) cannot represent  exactly. In financial systems, using `float` instead of `Decimal` can lead to errors of  or more per transaction, which aggregates to significant capital loss in high-volume trading.
 
 ---
 
-### **Challenge 2.2 – Arithmetic Operators**
+### **Challenge 2.2 – Floor Division vs. Truncation**
 
 ```python
-a, b = 7, 3
-print(a/b, a//b, a%b, a**b)
+print(-7 // 3)  # -3
+print(int(-7 / 3)) # -2
+
 ```
+
+**Explanation:** `//` is **floor division** (rounds toward negative infinity). `int()` casting performs **truncation** (rounds toward zero).
 
 ---
 
-### **Challenge 2.3 – Operator Precedence**
+## **Module 3: Strings & Text Engineering**
+
+### **Challenge 3.1 – String Interning & Memory**
 
 ```python
-result = 2 + 3 * 4 ** 2 / 2
-print(result)
+s1 = "python_is_fast"
+s2 = "python_is_fast"
+print(s1 is s2) # True (Interned by compiler)
+
+s3 = "".join(["py", "thon"])
+s4 = "python"
+print(s3 is s4) # False (Created at runtime)
+
 ```
 
-*Explanation:* `**` > `*`/`/` > `+`.
-
----
-
-### **Challenge 2.4 – Complex Numbers**
+### **Challenge 3.2 – Advanced Slicing & Step**
 
 ```python
-c = 3 + 4j
-print(c.real, c.imag, abs(c))
-```
+data = "123456789"
+# Extract even numbers in reverse
+print(data[7::-2]) # "8642"
 
----
-
-### **Challenge 2.5 – Type Conversion**
-
-```python
-x = "100"
-y = 5
-print(int(x) + y)
-```
-
----
-
-## **Module 3: Strings & Text**
-
-### **Challenge 3.1 – Slicing**
-
-```python
-text = "Python"
-print(text[1:4], text[::-1], text[::2])
-```
-
----
-
-### **Challenge 3.2 – Case Manipulation**
-
-```python
-s = "hello world"
-print(s.upper(), s.capitalize(), s.title())
-```
-
----
-
-### **Challenge 3.3 – F-Strings**
-
-```python
-name = "Alice"
-age = 30
-print(f"Name: {name}, Age: {age}")
-```
-
----
-
-### **Challenge 3.4 – Multi-line Strings**
-
-```python
-print("""Line 1
-Line 2
-Line 3""")
-```
-
----
-
-### **Challenge 3.5 – String Methods**
-
-```python
-s = "   Python  "
-print(s.strip(), s.startswith("Py"), s.endswith("on"))
 ```
 
 ---
 
 ## **Module 4: Booleans & Truthiness**
 
-### **Challenge 4.1 – Truthiness**
+### **Challenge 4.1 – The `or` Operator for Defaults**
 
 ```python
-values = [None, 0, "", [], {}, set()]
-for v in values:
-    print(bool(v))
+user_input = ""
+display_name = user_input or "Anonymous"
+print(display_name) # "Anonymous"
+
+```
+
+**Explanation:** Python's `or` returns the first "Truthy" value it encounters. This is a common pattern for setting fallbacks.
+
+### **Challenge 4.2 – Short-circuit Safety**
+
+```python
+def is_valid(val):
+    return val > 0
+
+data = None
+# This prevents an AttributeError/TypeError
+if data is not None and is_valid(data):
+    print("Valid")
+
 ```
 
 ---
 
-### **Challenge 4.2 – Conditional Expressions**
+## **Module 5: Collection Engineering**
+
+### **Challenge 5.1 – Big-O Complexity: List vs. Set**
+
+```python
+import time
+large_list = list(range(10_000_000))
+large_set = set(large_list)
+
+# Search speed comparison
+start = time.time()
+9_999_999 in large_list # O(n) - Linear search
+print(f"List time: {time.time() - start}")
+
+start = time.time()
+9_999_999 in large_set # O(1) - Hash lookup
+print(f"Set time: {time.time() - start}")
+
+```
+
+**Statistics:** For 10 million elements, a `set` lookup is approximately **100,000x faster** than a `list` lookup because it uses a hash table.
+
+---
+
+## **Module 6: Functions, Scoping & EAFP**
+
+### **Challenge 6.1 – LEGB Scoping Mystery**
 
 ```python
 x = 10
-result = "Even" if x % 2 == 0 else "Odd"
-print(result)
+def outer():
+    x = 20
+    def inner():
+        nonlocal x
+        x += 5
+        print(f"Inner: {x}")
+    inner()
+    print(f"Outer: {x}")
+
+outer()
+print(f"Global: {x}")
+
 ```
+
+**Solution:** Inner: 25, Outer: 25, Global: 10. `nonlocal` modifies the enclosing scope, while `global` would modify the top-level scope.
 
 ---
 
-### **Challenge 4.3 – Logical Operators**
+### **Challenge 6.2 – EAFP for File I/O**
 
 ```python
-a, b = True, False
-print(a and b, a or b, not a)
-```
+# LBYL (Look Before You Leap) - Prone to race conditions
+import os
+if os.path.exists("data.txt"):
+    with open("data.txt") as f:
+        pass
 
----
-
-### **Challenge 4.4 – Membership Testing**
-
-```python
-fruits = ["apple","banana"]
-print("apple" in fruits, "orange" not in fruits)
-```
-
----
-
-### **Challenge 4.5 – Short-circuit Evaluation**
-
-```python
-def side_effect():
-    print("Called")
-    return True
-x = False and side_effect()  # side_effect not called
-```
-
----
-
-## **Module 5: Collections**
-
-### **Challenge 5.1 – Lists & Tuples**
-
-```python
-lst = [1,2,3]
-tpl = (4,5,6)
-lst.append(4)
-print(lst, tpl)
-```
-
----
-
-### **Challenge 5.2 – Sets**
-
-```python
-s = {1,2,2,3}
-s.add(4)
-print(s)
-```
-
----
-
-### **Challenge 5.3 – Dictionaries**
-
-```python
-d = {"a":1, "b":2}
-d["c"] = 3
-print(d)
-```
-
----
-
-### **Challenge 5.4 – Safe Dictionary Access**
-
-```python
-user = {"name":"Alice"}
-role = user.get("role","viewer")
-print(role)
-```
-
----
-
-### **Challenge 5.5 – Nested Dictionary**
-
-```python
-profile = {"user": {"name":"Alice"}}
-age = profile.get("user", {}).get("age", 0)
-print(age)
-```
-
----
-
-### **Challenge 5.6 – Dictionary Comprehension**
-
-```python
-words = ["apple","banana"]
-lengths = {w:len(w) for w in words}
-print(lengths)
-```
-
----
-
-### **Challenge 5.7 – List Comprehension**
-
-```python
-evens = [x**2 for x in range(1,11) if x%2==0]
-print(evens)
-```
-
----
-
-### **Challenge 5.8 – Nested Comprehension**
-
-```python
-matrix = [[i*j for j in range(1,4)] for i in range(1,4)]
-print(matrix)
-```
-
----
-
-### **Challenge 5.9 – Flatten Nested List**
-
-```python
-nested = [[1,2],[3,4],[5]]
-flat = [x for sublist in nested for x in sublist]
-print(flat)
-```
-
----
-
-## **Module 6: Functions & EAFP**
-
-### **Challenge 6.1 – Safe Division**
-
-```python
-def safe_div(a,b):
-    try:
-        return a/b
-    except ZeroDivisionError:
-        return None
-print(safe_div(10,0))
-```
-
----
-
-### **Challenge 6.2 – Input Validation**
-
-```python
+# EAFP (Easier to Ask Forgiveness than Permission) - Atomic and Pythonic
 try:
-    age = int(input("Enter age: "))
-except ValueError:
-    print("Invalid input")
-```
+    with open("data.txt") as f:
+        pass
+except FileNotFoundError:
+    print("File not found.")
 
----
-
-### **Challenge 6.3 – Default Arguments**
-
-```python
-def greet(name="Guest"):
-    print(f"Hello, {name}!")
-greet()
-greet("Alice")
-```
-
----
-
-### **Challenge 6.4 – Variable Arguments**
-
-```python
-def add(*args):
-    return sum(args)
-print(add(1,2,3))
-```
-
----
-
-### **Challenge 6.5 – Keyword Arguments**
-
-```python
-def user_info(**kwargs):
-    print(kwargs)
-user_info(name="Alice", age=30)
 ```
 
 ---
 
 ## **Module 7: Advanced Pythonic Patterns**
 
-### **Challenge 7.1 – Unpacking Operators**
-
-```python
-numbers = [1,2,3,4,5]
-a,*b,c = numbers
-merged = [*numbers, 6,7]
-print(a,b,c,merged)
-```
-
----
-
-### **Challenge 7.2 – Enumerate & Items**
-
-```python
-fruits = ["apple","banana"]
-for i, fruit in enumerate(fruits,1):
-    print(i,fruit)
-```
-
----
-
-### **Challenge 7.3 – Merging & Deduplication**
-
-```python
-l1 = [1,2,3,3]
-l2 = [3,4,5]
-merged = list(set(l1+l2))
-print(merged)
-```
-
----
-
-### **Challenge 7.4 – Memory Awareness**
+### **Challenge 7.1 – Generator Memory Efficiency**
 
 ```python
 import sys
-lst = list(range(10**6))
-tpl = tuple(range(10**6))
-print(sys.getsizeof(lst), sys.getsizeof(tpl))
+# List comprehension (Loads everything into RAM)
+list_comp = [x**2 for x in range(10_000)]
+# Generator expression (Lazy evaluation)
+gen_exp = (x**2 for x in range(10_000))
+
+print(f"List Size: {sys.getsizeof(list_comp)} bytes")
+print(f"Gen Size: {sys.getsizeof(gen_exp)} bytes")
+
 ```
 
----
+**Engineering Note:** A generator always occupies about **112 bytes** regardless of the range size, making it the only viable choice for processing infinite streams or multi-gigabyte log files.
 
-### **Challenge 7.5 – Palindrome Check**
+### **Challenge 7.2 – Dictionary Merging (Python 3.9+)**
 
 ```python
-s = "racecar"
-print(s==s[::-1])
+base_config = {"host": "localhost", "port": 8080}
+user_config = {"port": 9000, "debug": True}
+
+# The Merge Operator
+merged = base_config | user_config 
+print(merged) # {'host': 'localhost', 'port': 9000, 'debug': True}
+
 ```
 
----
-
-### **Challenge 7.6 – FizzBuzz**
+### **Challenge 7.3 – The `__missing__` Pattern**
 
 ```python
-for i in range(1,21):
-    print("Fizz"*(i%3==0)+"Buzz"*(i%5==0) or i)
+class MyDict(dict):
+    def __missing__(self, key):
+        return "Key not found!"
+
+d = MyDict(a=1)
+print(d['b']) # "Key not found!"
+
 ```
 
----
-
-### **Challenge 7.7 – Sorting Dictionary by Value**
+### **Challenge 7.4 – Decorators (Introduction)**
 
 ```python
-scores = {"Alice":90,"Bob":75,"Charlie":85}
-sorted_scores = {k:v for k,v in sorted(scores.items(), key=lambda item: item[1], reverse=True)}
-print(sorted_scores)
+import time
+
+def timer(func):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        print(f"Execution time: {time.time() - start}s")
+        return result
+    return wrapper
+
+@timer
+def heavy_task():
+    time.sleep(1)
+
+heavy_task()
+
 ```
-
----
-
-### **Challenge 7.8 – Generator Expression**
-
-```python
-squares = (x**2 for x in range(10))
-for sq in squares:
-    print(sq)
-```
-
----
-
-### **Challenge 7.9 – Context Managers**
-
-```python
-with open("test.txt","w") as f:
-    f.write("Hello")
-# file auto-closed
-```
-
----
-
-
