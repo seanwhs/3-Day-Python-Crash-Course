@@ -1,5 +1,8 @@
 # **Python Lab: Variables, Types & Mutability**
 
+**Name:** ______________________
+**Date:** ______________________
+
 **Objective**
 
 * Understand Python’s **dynamic typing**
