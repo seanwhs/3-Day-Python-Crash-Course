@@ -1,4 +1,9 @@
 # 🧪 **Hands-On Lab — Python `lambda`**
+---
+**Name:** ______________________
+**Date:** ______________________
+---
+
 
 **Focus: small, disposable functions used correctly**
 
