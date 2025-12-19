@@ -1,8 +1,8 @@
 # **Python Lab Worksheet: Getting Help in Python**
-
+---
 **Name:** ______________________
 **Date:** ______________________
-
+---
 **Objective:**
 Learn to explore Python objects, modules, and built-in functions using `help()`, `dir()`, and the `builtins` module.
 
